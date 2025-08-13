@@ -7,6 +7,8 @@
 </div>
 </div>
 
+<br>
+
 > **Abstract**: Class-incremental learning (CIL) aims to adapt to continuously emerging new classes while preserving knowledge of previously learned ones. Few-shot class-incremental learning (FSCIL) presents a greater challenge that requires the model to learn new classes from only a limited number of samples per class. While incremental learning typically assumes restricted access to past data, it often remains available in many real-world scenarios. This raises a practical question: should one retrain the model on the full dataset (i.e., joint training), or continue updating it solely with new data? In CIL, joint training serves as an ideal benchmark that offers a reference for evaluating the trade-offs between performance and computational cost. However, in FSCIL, joint training becomes less reliable due to severe class imbalance. This results in the absence of a practical baseline, making it unclear which strategy is preferable for practitioners. To this end, we revisit joint training in the context of FSCIL by integrating imbalance mitigation techniques. Through extensive comparisons with existing FSCIL methods, we analyze which training strategies are suitable when access to prior data is permitted. Our work provides realistic insights and practical guidance for method selection in real-world FSCIL applications.
 
 Official implementation of "Does Prior Data Matters? Exploring Joint Training in the Context of Few-Shot Class-Incremental Learning (ICCVW 2025)".
