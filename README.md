@@ -1,20 +1,17 @@
-<div align="center">
+# Does Prior Data Matter? Exploring Joint Training in the Context of Few-Shot Class-Incremental Learning
 
-<h3>Does Prior Data Matter? Exploring Joint Training in the Context of Few-Shot Class-Incremental Learning</h3>
+<a href="https://shiwonkim.github.io/">Shiwon Kim</a>\*, <a href="https://dongjunhwang.github.io/">Dongjun Hwang</a>\*, <a href="https://sungwon-woo.github.io/">Sungwon Woo</a>\*, <a href="https://www.cs.cmu.edu/~rsingh/">Rita Singh</a> (\* equal contribution)
 
-<a href="https://shiwonkim.github.io/">Shiwon Kim*</a>, <a href="https://dongjunhwang.github.io/">Dongjun Hwang*</a>, <a href="https://sungwon-woo.github.io/">Sungwon Woo*</a>, <a href="https://www.cs.cmu.edu/~rsingh/">Rita Singh</a> (<small><small>* Equal Contribution</small></small>)
+This is the official PyTorch implementation of our ICCVW 2025 (<a href="https://sites.google.com/view/clvision2025/overview?authuser=0">CLVision</a>) publication:<br>
+"**Does Prior Data Matter? Exploring Joint Training in the Context of Few-Shot Class-Incremental Learning.**" [[paper](https://arxiv.org/abs/2503.10003)]
 
-<div>
- ICCV 2025 <a href="https://sites.google.com/view/clvision2025/overview?authuser=0"> Workshop on Continual Learning in Computer Vision (CLVision)</a>
-</div>
-</div>
-
+[Datasets](#datasets) • [Methods Reproduced](#methods-reproduced) • [Experiments](#experiments) • [Citation](#citation)
 <br>
 
-> **Abstract**: Class-incremental learning (CIL) aims to adapt to continuously emerging new classes while preserving knowledge of previously learned ones. Few-shot class-incremental learning (FSCIL) presents a greater challenge that requires the model to learn new classes from only a limited number of samples per class. While incremental learning typically assumes restricted access to past data, it often remains available in many real-world scenarios. This raises a practical question: should one retrain the model on the full dataset (i.e., joint training), or continue updating it solely with new data? In CIL, joint training is considered an ideal benchmark that provides a reference for evaluating the trade-offs between performance and computational cost. However, in FSCIL, joint training becomes less reliable due to severe imbalance between base and incremental classes. This results in the absence of a practical baseline, making it unclear which strategy is preferable for practitioners. To this end, we revisit joint training in the context of FSCIL by incorporating imbalance mitigation techniques, and suggest a new imbalance-aware joint training benchmark for FSCIL. We then conduct extensive comparisons between this benchmark and FSCIL methods to analyze which approach is most suitable when prior data is accessible. Our analysis offers realistic insights and guidance for selecting training strategies in real-world FSCIL scenarios.
+<img width="739" height="271" alt="Image" src="https://github.com/user-attachments/assets/a15bfe84-b520-4f6f-af1d-06b013db5cf7" />
+<br><br>
 
-Official PyTorch implementation of our ICCVW 2025 paper:<br>
-"Does Prior Data Matter? Exploring Joint Training in the Context of Few-Shot Class-Incremental Learning." [[paper](https://arxiv.org/abs/2503.10003)]
+> **Abstract**: Class-incremental learning (CIL) aims to adapt to continuously emerging new classes while preserving knowledge of previously learned ones. Few-shot class-incremental learning (FSCIL) presents a greater challenge that requires the model to learn new classes from only a limited number of samples per class. While incremental learning typically assumes restricted access to past data, it often remains available in many real-world scenarios. This raises a practical question: should one retrain the model on the full dataset (i.e., joint training), or continue updating it solely with new data? In CIL, joint training is considered an ideal benchmark that provides a reference for evaluating the trade-offs between performance and computational cost. However, in FSCIL, joint training becomes less reliable due to severe imbalance between base and incremental classes. This results in the absence of a practical baseline, making it unclear which strategy is preferable for practitioners. To this end, we revisit joint training in the context of FSCIL by incorporating imbalance mitigation techniques, and suggest a new imbalance-aware joint training benchmark for FSCIL. We then conduct extensive comparisons between this benchmark and FSCIL methods to analyze which approach is most suitable when prior data is accessible. Our analysis offers realistic insights and guidance for selecting training strategies in real-world FSCIL scenarios.
 
 ## Datasets
 We use the same data `index_list` suggested in the previous FSCIL work.<br>Please refer to [CEC](https://github.com/icoz69/CEC-CVPR2021?tab=readme-ov-file) for detailed instructions on data preparation.
